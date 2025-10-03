@@ -63,7 +63,7 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 ### ⚡ Efficiency Gains (Before vs After)
 |Step|Before|After (Optimized)|Improvement|
 |----|-----|------|-----|
-|Downlaoding and Processing (1 year)|3-5 hours|40-60 minutes|4x faster|
+|Downloading and Processing (1 year)|3-5 hours|40-60 minutes|4x faster|
 |Data Loading (25 yrs)|~40 minutes|< 1 second|~2400× faster|
 
 ---
