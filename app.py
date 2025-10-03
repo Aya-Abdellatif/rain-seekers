@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from weather_predictor import WeatherPredictor
 from data_handler import DataHandler
-
 import datetime
 
 
