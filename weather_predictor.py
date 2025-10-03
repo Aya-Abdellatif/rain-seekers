@@ -8,7 +8,7 @@ class WeatherPredictor:
         self.model = tf.keras.models.load_model(model_path)
         self.scaler = joblib.load(scaler_path)
 
-    def _make_features(lat: float, lon: float, dt: datetime.datetime):
+    def _make_features(self, lat: float, lon: float, dt: datetime.datetime):
         """Convert raw lat, lon, datetime into model-ready features."""
 
         day_of_year = dt.timetuple().tm_yday
