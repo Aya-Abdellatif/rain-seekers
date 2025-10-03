@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+.bg-custom {
+  background-color: #6a1b9a !important;  /* purple */
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #f1c40f !important;  /* gold on hover */
+}
+
+.card {
+    border-radius: 12px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.home{
+    background: url('../static/images/home-bg.svg') no-repeat center center/cover;
+    height: 100vh; /* full screen height */
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../static/images/home-bg.svg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55); /* dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Form Style */
+.weather-form {
+  background: rgba(255,255,255,0.15);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.form-control, .form-select, .btn {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3966, #3a3c60);
+  border: none;
+  border-color: #3a3c60;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a3d82, #7648c9);
+}
+
+#map {
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.map-btn {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+.map-btn:hover {
+  background: linear-gradient(135deg, #5a3d82, #7648c9);
+  color: white;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>result</title>
+  <link href="../static/result.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: black;">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand fw-bold" href="/">🌦 Rain Seekers</a>
+    
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- pushes items to right -->
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="insights-form.html">Weather Insights</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="map">
+    <img src="../static/images/map.svg" alt="Background Image" style="position: absolute; width: 100%; height: 100%; object-fit:fill; z-index: -1;">
+</section>
+
+<!-- weather Section -->
+<section id="results" class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Weather Insights</h2>
+    <br>
+    <!-- Row 1 -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-white shadow" style="background-image: url('../static/images/Temperature.svg'); background-size: cover; background-position: center; height: 300px; margin-right: 50px;">
+          <div class="card-body d-flex flex-column justify-content-end">
+            <h5 class="card-title">Temperature</h5>
+            <p class="card-text">Temperature: 28°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow" style="background-image: url('../static/images/Temperature-icon.svg'); background-size:cover; background-position: right; height: 300px;">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <p>Plot goes here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br>
+    <!-- Row 2 -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-white shadow" style="background-image: url('../static/images/Wind\ Speed.svg'); background-size: cover; background-position: center; height: 300px; margin-right: 50px;">
+          <div class="card-body d-flex flex-column justify-content-end">
+            <h5 class="card-title">Wind Speed</h5>
+            <p class="card-text">Temperature: 18°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow" style="background-image: url('../static/images/Wind\ Spped-icon.svg'); background-size: cover; background-position: right; height: 300px;">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <p>Plot goes here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- Row 3 -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-white shadow" style="background-image: url('../static/images/Pressure.svg'); background-size: cover; background-position: center; height: 300px; margin-right: 50px;">
+          <div class="card-body d-flex flex-column justify-content-end">
+            <h5 class="card-title">Pressure</h5>
+            <p class="card-text">Temperature: 22°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow" style="background-image: url('../static/images/Pressure-icon.svg'); background-size: cover; background-position: right; height: 300px;">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <p>Plot goes here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- Row 4 -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-white shadow" style="background-image: url('../static/images/Humidity.svg'); background-size: cover; background-position: center; height: 300px; margin-right: 50px;">
+          <div class="card-body d-flex flex-column justify-content-end">
+            <h5 class="card-title">Humidity</h5>
+            <p class="card-text">Temperature: 15°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow" style="background-image: url('../static/images/Humidity-icon.svg'); background-size: cover; background-position: right; height: 300px;">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <p>Plot goes here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <!-- Buttons at bottom -->
+    <div class="text-center mt-4" style="margin-left: -35px;">
+      <button class="btn btn-success btn-lg me-3" style="border-color: #3a3c60; width:270px">
+        <i class="fas fa-download"></i> Download as CSV
+      </button>
+      <button class="btn btn-primary btn-lg" style="border-color: #3a3c60; width:270px">
+        <i class="fas fa-book-open"></i> More information
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Bootstrap JS (for toggle button) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

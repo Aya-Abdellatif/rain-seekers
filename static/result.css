@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+.bg-custom {
+  background-color: #6a1b9a !important;  /* purple */
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #f1c40f !important;  /* gold on hover */
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: #3a3c60;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.map{
+    height: 100vh; /* full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../static/images/home-bg.svg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 2rem;
+}
+
+.btn-primary, .btn-success {
+  background: linear-gradient(135deg, #7c3966, #3a3c60);
+  border: none;
+  border-color: #3a3c60;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+}
+
+.btn-primary:hover, .btn-success:hover{
+    background: linear-gradient(135deg, #5a3d82, #7648c9);
+}
