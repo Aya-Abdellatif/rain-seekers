@@ -147,7 +147,7 @@ Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:
 <table>
   <tr>
     <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQG54S7ivcdAig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728139307128?e=1762387200&v=beta&t=hszyUpReqy_e41alKhPQOKVR_Ggx8HKdTr4eEUvrDC4" width="100px;" alt="Pavly Samuel"/>
+      <img src="https://avatars.githubusercontent.com/u/99624292?v=4" width="100px;" alt="Pavly Samuel"/>
       <br />
       <a href="https://www.linkedin.com/in/pavlysamuel/">Pavly Samuel</a>
     </td>
