@@ -77,10 +77,9 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Flask (Python)
+- **Backend + Frontend:** Flask (serves both the web interface & API)
 - **Machine Learning:** Deep Learning Regression Model
 - **Data:** NASA MERRA-2 (`M2T1NXSLV v5.12.4`)
-- **Frontend:** *(TBD – will be added after final implementation)*
 - **Deployment:** *(TBD – local/demo for hackathon use)*
 
 ---
