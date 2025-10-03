@@ -60,6 +60,21 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 
 ---
 
+### ⚡ Efficiency Gains (Before vs After)
+|Step|Before|After (Optimized)|Improvement|
+|----|-----|------|-----|
+|Downlaodinng and Processing (1 year)|3-5 hours|40-60 minutes|4x faster|
+|Data Loading (25 yrs)|~40 minutes|< 1 second|~2400× faster|
+
+---
+
+### 🌍 Scalability & Reproducibility
+- Scalable: Can be extended to more cities or even global coverage.
+- Reproducible: Intermediate and final datasets are saved and versioned, ensuring consistent results without repeating heavy computations.
+- Hackathon-Ready: Preprocessed data allows training and predictions in real time during demos.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Backend:** Flask (Python)
