@@ -113,6 +113,7 @@ RainSeekers/
 │── app.py                   # The flask app
 │── data_handler.py          # The component responsible for handling data efficiently
 │── weather_predictor.py     # The component responsible for predicting future/unavailable data
+│── requirements.txt         # The required python libraries
 ```
 
 ---
@@ -122,15 +123,15 @@ RainSeekers/
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/RainSeekers.git
-cd RainSeekers
+git clone https://github.com/Aya-Abdellatif/rain-seekers.git
+cd rain-seekers
 pip install -r requirements.txt
 ```
 
 Run the Flask app:
 
 ```bash
-python app.py
+flask run
 ```
 
 Open in your browser at:  
