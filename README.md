@@ -151,10 +151,10 @@ Open in your browser at:
 ## 🌍 Impact
 
 RainSeekers makes **NASA’s weather data accessible to everyone**.  
-- 🌱 Helps individuals plan safe outdoor activities.  
-- 🎶 Supports event organizers (e.g., concerts, sports).  
-- 🌾 Provides insights for communities and small farmers.  
-- 📚 Educates students and enthusiasts about data-driven climate forecasting.  
+- Helps individuals plan safe outdoor activities.  
+- Supports event organizers (e.g., concerts, sports).  
+- Provides insights for communities and small farmers.  
+- Educates students and enthusiasts about data-driven climate forecasting.  
 
 ---
 
@@ -188,13 +188,19 @@ Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:
 
 ---
 
-## 📸 Screenshots
+## 🌐 Web App Interface
 
-(Add screenshots of your web app here)  
+### Home Page
+![Home](images/home.png)
 
-| Home Page | Prediction Result | Charts & Visualizations |
-|-----------|------------------|-------------------------|
-| ![Home](images/home.png) | ![Prediction](images/prediction.png) | ![Charts](images/charts.png) |
+### Weather Insights
+![Weather Insights](images/insights.png)
+
+### About
+![About](images/about.png)
+
+### Contact
+![Contact](images/contact.png)
 
 ---
 
