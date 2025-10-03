@@ -43,5 +43,10 @@ h2, h3 {
 }
 
 .btn-primary:hover, .btn-success:hover{
-    background: linear-gradient(135deg, #5a3d82, #7648c9);
+  background: linear-gradient(135deg, #5a3d82, #7648c9);
 }
+
+body.modal-open {
+  background-color: rgba(0, 0, 0, 0.55) !important;
+}
+

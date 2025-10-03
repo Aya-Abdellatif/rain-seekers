@@ -47,6 +47,62 @@
   </div>
 </nav>
 
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel" style="color: #7c3966;">Detailed Weather Data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body (Table inside) -->
+      <div class="modal-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Value</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Temperature</td>
+              <td>{{ data[-1]["T2M"] }}</td>
+              <td>°C</td>
+            </tr>
+            <tr>
+              <td>Humidity</td>
+              <td>{{ data[-1]["QV2M"] }}</td>
+              <td>%</td>
+            </tr>
+            <tr>
+              <td>Pressure</td>
+              <td>{{ data[-1]["PS"] }}</td>
+              <td>hPa</td>
+            </tr>
+            <tr>
+              <td>Wind Speed</td>
+              <td>{{ data[-1]["U10M"] }}</td>
+              <td>m/s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="border-color: #3a3c60;">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <body>
   <section class="map">
     <img src="../static/images/map_{{ city }}.svg" alt="Background Image" style="position: absolute; width: 100%; height: 100%; object-fit:fill; z-index: -1;">
@@ -138,10 +194,12 @@
   <!-- Buttons at bottom -->
     <div class="text-center mt-4" style="margin-left: -35px;">
       <button class="btn btn-success btn-lg me-3" style="border-color: #3a3c60; width:270px">
-        <i class="fas fa-download"></i> Download as CSV
+        <i class="fas fa-download"></i> &nbsp; Download as CSV
       </button>
-      <button class="btn btn-primary btn-lg" style="border-color: #3a3c60; width:270px">
-        <i class="fas fa-book-open"></i> More information
+      <button class="btn btn-primary btn-lg" 
+        style="border-color: #3a3c60; width:270px"
+        data-bs-toggle="modal" data-bs-target="#infoModal">
+        <i class="fas fa-book-open"></i> &nbsp; More information
       </button>
     </div>
   </div>
