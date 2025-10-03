@@ -7,11 +7,11 @@ import datetime
 app = Flask(__name__)
 
 cities = {
-    "Cairo": (30.0444, 31.2357),
-    "Tokyo": (35.6762, 139.6503),
-    "Rio": (-22.9068, -43.1729),
-    "Sydney": (-33.8688, 151.2093),
-    "WashingtonDC": (38.9072, -77.0369),
+    "cairo": (30.0444, 31.2357),
+    "tokyo": (35.6762, 139.6503),
+    "rio": (-22.9068, -43.1729),
+    "sydney": (-33.8688, 151.2093),
+    "washingtondc": (38.9072, -77.0369),
 }
 
 weather_predictor = WeatherPredictor("model/model.keras", "scaler/scaler.pkl")
@@ -37,4 +37,4 @@ def insights():
 
         data = data_handler.get_range(start_date, end_date, city).to_dict(orient="records")
         print(data)
-        return render_template("result.html", data=data, plot=plot)
+        return render_template("result.html", data=data, plot=plot, city=city)
