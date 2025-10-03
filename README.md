@@ -27,7 +27,7 @@ Our mission: **Help people plan better, safer, and more enjoyable activities by 
 We designed an optimized pipeline to handle large NASA climate datasets efficiently:
 
 ### 1️⃣ Data Collection  
-- Downloaded from NASA using [`eatchaccess`](https://github.com/cedadev/eats-access).  
+- Downloaded from NASA using [`eatchaccess`](https://pypi.org/project/earthaccess/)).  
 - Extracted only the 5 supported cities: **Cairo, Washington DC, Rio de Janeiro, Tokyo, Sydney**.  
 - Selected daily averages for key variables:  
   - `T2M` (temperature)  
