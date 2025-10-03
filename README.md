@@ -1,6 +1,6 @@
 # 🌧️ RainSeekers
 
-RainSeekers is a web application developed for the **NASA Space Apps Hackathon**.  
+RainSeekers is a web application developed for the **NASA Space Apps Hackathon 2025**.  
 It predicts **temperature, pressure, humidity, and wind speed** for a given location and date, then evaluates whether specific activities (like going on a picnic, visiting the beach, or hosting a concert) are suitable for that day.  
 
 Our mission: **Help people plan better, safer, and more enjoyable activities by making NASA’s weather data accessible to everyone.**
@@ -55,7 +55,7 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 ### 3️⃣ Data Optimization  
 - Saved preprocessed data in **Feather format (.feather)** for instant loading.  
 - 📉 Before: Loading NetCDF files for 25 years = **~40 minutes**.  
-- ⚡ After: Loading Feather files = **milliseconds**.  
+- ⚡ After: Loading Feather files = **< 1 second**.  
 - → Massive improvement in training & prediction efficiency.  
 
 ---
