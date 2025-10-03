@@ -62,34 +62,9 @@
       <!-- Body (Table inside) -->
       <div class="modal-body">
         <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Condition</th>
-              <th>Value</th>
-              <th>Unit</th>
-            </tr>
+          <thead id="tableHead">
           </thead>
-          <tbody>
-            <tr>
-              <td>Temperature</td>
-              <td>{{ data[-1]["T2M"] }}</td>
-              <td>°C</td>
-            </tr>
-            <tr>
-              <td>Humidity</td>
-              <td>{{ data[-1]["QV2M"] }}</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>Pressure</td>
-              <td>{{ data[-1]["PS"] }}</td>
-              <td>hPa</td>
-            </tr>
-            <tr>
-              <td>Wind Speed</td>
-              <td>{{ data[-1]["U10M"] }}</td>
-              <td>m/s</td>
-            </tr>
+          <tbody id="tableBody">
           </tbody>
         </table>
       </div>
@@ -221,6 +196,50 @@
     const date = new Date(d.time);
     return date.toISOString().split("T")[0]; 
   });
+
+  function downloadJSON() {
+    // Convert JS object to JSON string
+    const jsonStr = JSON.stringify(dataset, null, 2); // 2-space indentation
+
+    // Create a Blob with MIME type application/json
+    const blob = new Blob([jsonStr], { type: "application/json" });
+
+    // Create a temporary <a> element
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "weather_data.json"; // filename
+    a.click();
+
+    // Clean up
+    URL.revokeObjectURL(a.href);
+  }
+
+
+  const tableHead = document.getElementById("tableHead");
+  const tableBody = document.getElementById("tableBody");
+
+  // Create table headers dynamically from object keys
+  const columns = Object.keys(dataset[0]);
+  columns.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col;
+    tableHead.appendChild(th);
+  });
+
+  // Create table rows
+  dataset.forEach(row => {
+    const tr = document.createElement("tr");
+    columns.forEach(col => {
+      const td = document.createElement("td");
+
+      // Optional: round numeric values
+      td.textContent = (typeof row[col] === "number") ? row[col].toFixed(2) : row[col];
+
+      tr.appendChild(td);
+    });
+    tableBody.appendChild(tr);
+  });
+
 
   if (plotType === "line") {
 
