@@ -166,10 +166,10 @@ RainSeekers makes **NASA’s weather data accessible to everyone**.
 ### Weather Insights
 ![Weather Insights](images/insights.png)
 
-### About
+### About Us
 ![About](images/about.png)
 
-### Contact
+### Contact Us
 ![Contact](images/contact.png)
 
 ---
