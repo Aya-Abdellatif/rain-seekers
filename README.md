@@ -88,12 +88,15 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 
 ```bash
 RainSeekers/
-│── data/             # Preprocessed datasets (for historical data)
-│── models/           # Trained regression models
-│── static/           # Assets (CSS, JS, images)
-│── templates/        # HTML templates
-│── README.md         # Documentation
-│── app.py            # The flask app
+│── data/                    # Dataset (for historical data)
+│── model/                   # Trained regression model
+│── scaler/                  # The scaler used with the data
+│── static/                  # Assets (CSS, JS, images)
+│── templates/               # HTML templates
+│── README.md                # Documentation
+│── app.py                   # The flask app
+│── data_handler.py          # The component responsible for handling data efficiently
+│── weather_predictor.py     # The component responsible for predicting future/unavailable data
 ```
 
 ---
