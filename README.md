@@ -9,17 +9,17 @@ Our mission: **Help people plan better, safer, and more enjoyable activities by 
 
 ## 🚀 Features
 
-- 🔭 **NASA Data Integration** – Uses NASA’s **M2T1NXSLV v5.12.4** dataset (1980–1983, 1991–2011).
-- 📊 **Deep Learning Predictions** – Forecasts:
-  - 🌡️ Temperature (`T2M`)
-  - 💧 Humidity (`QV2M`)
-  - 🌬️ Wind speed (`U10M`, `V10M`)
-  - 🏞️ Surface pressure (`PS`)
-- 🌍 **Supported Cities** – Cairo, Washington DC, Rio de Janeiro, Tokyo, Sydney.
-- 🎯 **Activity Scoring System** – Rates how suitable the weather is for different activities.
-- 📜 **Historical & Future Data** – Explore trends and predict upcoming conditions.
-- 📈 **Data Visualizations** – Interactive charts for a clear, user-friendly experience.
-- 🖥️ **Accessible Web Platform** – No technical background needed.
+- **NASA Data Integration** – Uses NASA’s **M2T1NXSLV v5.12.4** dataset (1980–1983, 1991–2011).
+- **Deep Learning Predictions** – Forecasts:
+  - Temperature (`T2M`)
+  - Humidity (`QV2M`)
+  - Wind speed (`U10M`, `V10M`)
+  - Surface pressure (`PS`)
+- **Supported Cities** – Cairo, Washington DC, Rio de Janeiro, Tokyo, Sydney.
+- **Activity Scoring System** – Rates how suitable the weather is for different activities.
+- **Historical & Future Data** – Explore trends and predict upcoming conditions.
+- **Data Visualizations** – Interactive charts for a clear, user-friendly experience.
+- **Accessible Web Platform** – No technical background needed.
 
 ---
 ## 🛰️ Data Pipeline & Processing
@@ -54,9 +54,9 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 
 ### 3️⃣ Data Optimization  
 - Saved preprocessed data in **Feather format (.feather)** for instant loading.  
-- 📉 Before: Loading NetCDF files for 25 years = **~40 minutes**.  
-- ⚡ After: Loading Feather files = **< 1 second**.  
-- → Massive improvement in training & prediction efficiency.  
+- Before: Loading NetCDF files for 25 years = **~40 minutes**.  
+- After: Loading Feather files = **< 1 second**.  
+- Massive improvement in training & prediction efficiency.  
 
 ---
 
