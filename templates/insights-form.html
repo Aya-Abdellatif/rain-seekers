@@ -52,19 +52,15 @@
     <h1>Discover weather insights</h1>
 
     <!-- Weather Form -->
-    <form class="weather-form">
+    <form class="weather-form" method="post">
       <div class="row g-3 mt-2">
         <!-- Select a plot -->
         <div class="col-md-12">
           <label class="form-label">Select Plot *</label>
-          <select class="form-select" required>
+          <select name="plot" class="form-select" required>
             <option value="">-- Select Plot --</option>
-            <option value="table">Table</option>
-            <option value="timeseries">Time Series</option>
+            <option value="line">Line</option>
             <option value="bar">Bar Chart</option>
-            <option value="column">Column Chart</option>
-            <option value="scatter">Scatter Plot</option>
-            <option value="pie">Pie Chart</option>
           </select>
         </div>
       </div>
@@ -74,7 +70,7 @@
           <!-- Dropdown -->
           <label class="form-label">Select City *</label>
           <div class="input-group">
-            <select id="city" class="form-select" required>
+            <select name="city" id="city" class="form-select" required>
               <option value="">--Choose a city--</option>
               <option value="Cairo">Cairo</option>
               <option value="Tokyo">Tokyo</option>
@@ -95,13 +91,13 @@
           <label class="form-label mb-0">From</label>
         </div>
         <div class="col-md-5">
-          <input type="date" class="form-control" required>
+          <input name="start_date" type="date" class="form-control" required>
         </div> 
         <div class="col-md-1 d-flex justify-content-center align-items-center">
           <span class="form-label mb-0">To</span>
         </div>
         <div class="col-md-5">
-          <input type="date" class="form-control">
+          <input name="end_date" type="date" class="form-control">
         </div>
       </div>
 
