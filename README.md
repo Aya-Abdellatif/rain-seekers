@@ -129,10 +129,30 @@ RainSeekers makes **NASA’s weather data accessible to everyone**.
 ## 👩‍💻 Team
 
 Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:  
-- Pavly Samuel  
-- Aya Abdullatif  
-- Aalaa Ayman  
-- Ahmed Essam  
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQG54S7ivcdAig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728139307128?e=1762387200&v=beta&t=hszyUpReqy_e41alKhPQOKVR_Ggx8HKdTr4eEUvrDC4" width="100px;" alt="Pavly Samuel"/>
+      <br />
+      <a href="https://www.linkedin.com/in/pavlysamuel/">Pavly Samuel</a>
+    </td>
+    <td align="center">
+      <img src="https://media.licdn.com/dms/image/v2/D4D35AQGY3JS4r8NAXw/profile-framedphoto-shrink_800_800/B4DZiqi2mfHYAk-/0/1755207920355?e=1760090400&v=beta&t=l28iiqWL8UChjg-3wNnJfBSku8GLwbSK8aNxjlKydf0" width="100px;" alt="Aya Abdullatif"/>
+      <br />
+      <a href="https://www.linkedin.com/in/aya-abdllatif/">Aya Abdullatif</a>
+    </td>
+    <td align="center">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQHzzKu1Bc4rDA/profile-displayphoto-crop_800_800/B4DZivj0IjGgAQ-/0/1755292059795?e=1762387200&v=beta&t=900D7A3-fGIJEan4WMNxurw7FIjZKamcEuvbPO6fgFQ" width="100px;" alt="Aalaa Ayman"/>
+      <br />
+      <a href="https://www.linkedin.com/in/aalaa-ayman/">Aalaa Ayman</a>
+    </td>
+    <td align="center">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEv-tvnkAnaKw/profile-displayphoto-crop_800_800/B4DZkoznvcIgAI-/0/1757326246833?e=1762387200&v=beta&t=rqGrIum6eyf7exxtemIM-HFBY9YTxQJTxFpAXx3hKKo" width="100px;" alt="Ahmed Essam"/>
+      <br />
+      <a href="https://www.linkedin.com/in/ahmed-essam538/">Ahmed Essam</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
