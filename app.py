@@ -21,6 +21,9 @@ data_handler = DataHandler("data/data.feather", cities, weather_predictor)
 def index():
     return render_template("index.html")
 
+@app.route("/insights-html")
+def explore():
+    return render_template("/insights-form.html")
 
 @app.route("/insights", methods=["GET", "POST"])
 def insights():

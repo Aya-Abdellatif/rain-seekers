@@ -18,6 +18,11 @@ body {
 .navbar .nav-link:hover {
   color: #d9c0ce !important;  /* gold on hover */
 }
+
+.nav-link.active {
+  font-weight: bold;
+}
+
 .card {
   border-radius: 12px;
 }
