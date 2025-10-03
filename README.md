@@ -158,6 +158,22 @@ RainSeekers makes **NASA’s weather data accessible to everyone**.
 
 ---
 
+## 🌐 Web App Interface
+
+### Home Page
+![Home](images/home.png)
+
+### Weather Insights
+![Weather Insights](images/insights.png)
+
+### About
+![About](images/about.png)
+
+### Contact
+![Contact](images/contact.png)
+
+---
+
 ## 👩‍💻 Team
 
 Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:  
@@ -185,22 +201,6 @@ Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:
     </td>
   </tr>
 </table>
-
----
-
-## 🌐 Web App Interface
-
-### Home Page
-![Home](images/home.png)
-
-### Weather Insights
-![Weather Insights](images/insights.png)
-
-### About
-![About](images/about.png)
-
-### Contact
-![Contact](images/contact.png)
 
 ---
 
