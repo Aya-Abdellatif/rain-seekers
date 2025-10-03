@@ -9,7 +9,7 @@ Our mission: **Help people plan better, safer, and more enjoyable activities by 
 
 ## 🚀 Features
 
-- 🔭 **NASA Data Integration** – Uses NASA’s **M2T1NXSLV v5.12.4** dataset (1980–1983, 1991–2010).
+- 🔭 **NASA Data Integration** – Uses NASA’s **M2T1NXSLV v5.12.4** dataset (1980–1983, 1991–2011).
 - 📊 **Deep Learning Predictions** – Forecasts:
   - 🌡️ Temperature (`T2M`)
   - 💧 Humidity (`QV2M`)
