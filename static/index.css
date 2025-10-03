@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+.bg-custom {
+  background-color: #6a1b9a !important;  /* purple */
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #f1c40f !important;  /* gold on hover */
+}
+
+.card {
+    border-radius: 12px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.home{
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.rounded-box {
+    margin-left: -10px;
+    width: 100%;
+    height: 60%;
+    padding: 30px;
+    border-radius: 20px;
+    background: url('../static/images/Home Page (2).svg') no-repeat center center/cover;
+    /*background: linear-gradient(to right, #4facfe, #00f2fe); /* gradient background */
+    color: white;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.rounded-box h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.rounded-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3966, #3a3c60);
+  border: none;
+  border-color: #3a3c60;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a3d82, #7648c9);
+}
