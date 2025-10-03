@@ -84,6 +84,22 @@ We designed an optimized pipeline to handle large NASA climate datasets efficien
 
 ---
 
+## 📈 Model Performance  
+
+We trained a deep learning regression model to predict 5 climate variables. Below are the **Mean Absolute Errors (MAE)** for each target:  
+
+| Variable | Description              | MAE      |
+|----------|--------------------------|----------|
+| `T2M`    | Temperature (K)          | **1.577** |
+| `QV2M`   | Humidity (kg/kg)         | **0.001** |
+| `U10M`   | Wind (east-west) (m/s)   | **2.654** |
+| `V10M`   | Wind (north-south) (m/s) | **2.855** |
+| `PS`     | Surface Pressure (Pa)    | **418.554** |
+
+✅ The errors are within acceptable ranges for climate prediction, making the model reliable for activity planning.  
+
+---
+
 ## 📂 Project Structure
 
 ```bash
