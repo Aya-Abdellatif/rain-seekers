@@ -32,20 +32,24 @@ h2, h3 {
     padding: 20px;
     justify-content: center;
     display: flex;
-    height: 100vh;
+}
+
+.rounded-box,
+.card {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 0 auto;            
+    height: auto;    
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .rounded-box {
-    margin-left: -10px;
-    width: 100%;
-    height: 60%;
-    padding: 30px;
-    border-radius: 20px;
     background: url('../static/images/Home Page (2).svg') no-repeat center center/cover;
-    /*background: linear-gradient(to right, #4facfe, #00f2fe); /* gradient background */
     color: white;
     text-align: left;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
 }
 
 .rounded-box h2 {
@@ -69,3 +73,84 @@ h2, h3 {
 .btn-primary:hover {
     background: linear-gradient(135deg, #5a3d82, #7648c9);
 }
+
+.about{
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.card{
+    color: white;
+    text-align: left;
+    box-shadow: 0 4px 8px #d9c0ce !important;
+}
+
+.contact{
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+}
+.contact-card {
+    background: linear-gradient(to bottom right, #7c3966, #3a3c60);
+    border-radius: 20px;
+    padding: 30px 50px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+ .contact-card:hover {
+    transform: translateY(-8px);
+}
+
+.contact-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3a3c60;
+    margin-bottom: 15px;
+}
+
+    .contact-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .contact-card p {
+      margin: 0 0 15px;
+      font-size: 15px;
+      color: #ddd;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00aced;
+    } 
