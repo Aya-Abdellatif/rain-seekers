@@ -197,6 +197,8 @@
     return date.toISOString().split("T")[0]; 
   });
 
+  localStorage.setItem("data", JSON.stringify(dataset))
+  
   function downloadJSON() {
     // Convert JS object to JSON string
     const jsonStr = JSON.stringify(dataset, null, 2); // 2-space indentation
