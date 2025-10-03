@@ -22,6 +22,43 @@ Our mission: **Help people plan better, safer, and more enjoyable activities by 
 - 🖥️ **Accessible Web Platform** – No technical background needed.
 
 ---
+## 🛰️ Data Pipeline & Processing
+
+We designed an optimized pipeline to handle large NASA climate datasets efficiently:
+
+### 1️⃣ Data Collection  
+- Downloaded from NASA using [`eatchaccess`](https://github.com/cedadev/eats-access).  
+- Extracted only the 5 supported cities: **Cairo, Washington DC, Rio de Janeiro, Tokyo, Sydney**.  
+- Selected daily averages for key variables:  
+  - `T2M` (temperature)  
+  - `QV2M` (humidity)  
+  - `U10M`, `V10M` (wind components)  
+  - `PS` (surface pressure)  
+
+⏱️ **Performance:**  
+- Sequential processing: **3–5 hours per year** of data.  
+- With multithreading: **40–60 minutes per year**.  
+- Saved intermediate results to avoid repeating this step.
+
+---
+
+### 2️⃣ Preprocessing  
+- Converted raw NetCDF data to **Pandas DataFrames**.  
+- Engineered new features to represent **cyclic variables**:  
+  - Day: `day_sin`, `day_cos`  
+  - Month: `month_sin`, `month_cos`  
+  - Latitude: `lat_sin`, `lat_cos`  
+  - Longitude: `lon_sin`, `lon_cos`  
+
+---
+
+### 3️⃣ Data Optimization  
+- Saved preprocessed data in **Feather format (.feather)** for instant loading.  
+- 📉 Before: Loading NetCDF files for 25 years = **~40 minutes**.  
+- ⚡ After: Loading Feather files = **milliseconds**.  
+- → Massive improvement in training & prediction efficiency.  
+
+---
 
 ## 🛠️ Tech Stack
 
