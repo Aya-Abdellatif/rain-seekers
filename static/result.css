@@ -1,22 +1,5 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
-}
-
-.navbar-brand {
-  font-size: 1.4rem;
-}
-.bg-custom {
-  background-color: #6a1b9a !important;  /* purple */
-}
-
-.navbar .nav-link {
-  color: white !important;
-}
-
-.navbar .nav-link:hover {
-  color: #f1c40f !important;  /* gold on hover */
 }
 
 .card {
