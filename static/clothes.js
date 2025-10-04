@@ -1,5 +1,10 @@
 
 weatherArray = JSON.parse(localStorage.getItem("data"));
+
+const hot = false;
+const normal = false;
+const cold = false;
+
 function summarizeClothing(weatherArray) {
     const tempKArray = weatherArray.map(day => day.T2M);
 
@@ -9,9 +14,17 @@ function summarizeClothing(weatherArray) {
 
     // Define clothing categories based on temperature
     function tempToClothes(tempK) {
-        if (tempK < 283.15) return "heavy/normal clothes";
-        if (tempK < 293.15) return "normal clothes";
-        return "light clothes";
+        if (tempK < 283.15) {
+            cold = true;
+            return "heavy/normal clothes";
+        }
+        else if (tempK < 293.15) {
+            normal = true;
+            return "normal clothes";
+        } else {
+            hot = true;
+            return "light clothes";
+        }
     }
 
     // Find ranges where clothing is similar
@@ -43,4 +56,8 @@ function summarizeClothing(weatherArray) {
 }
 
 const clothingSummary = summarizeClothing(weatherArray);
+const fullString = clothingSummary
+  .map(item => `From day ${item.from} to ${item.to}: ${item.recommendation}`)
+  .join('. ');
 const summaryDiv = document.getElementById("clothing-summary");
+summaryDiv.innerHTML = fullString;
