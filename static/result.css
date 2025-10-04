@@ -34,6 +34,20 @@ h2, h3 {
   padding: 2rem;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* grey with 40% opacity */
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
 .btn-primary, .btn-success {
   background: linear-gradient(135deg, #7c3966, #3a3c60);
   border: none;
@@ -50,3 +64,14 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.55) !important;
 }
 
+footer {
+  background: linear-gradient(to bottom right, #6b3157, #3a3c60);
+  color: #555;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}

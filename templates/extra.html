@@ -8,79 +8,129 @@
   <link href="../static/result.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background: linear-gradient(to bottom right, #6b3157, #3a3c60);">
   <div class="container">
-    <!-- Brand / Logo -->
-    <a class="navbar-brand fw-bold" href="index.html"><img src="../static/images/logo.svg" style="width: 40px;"> &nbsp; Rain Seekers</a>
-    
-    <!-- Mobile Toggle Button -->
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="../static/images/logo.svg" style="width: 40px;"> &nbsp; Rain Seekers
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav" aria-controls="navbarNav" 
-        aria-expanded="false" aria-label="Toggle navigation">
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto"> <!-- pushes items to right -->
-        <li class="nav-item">
-          <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('insights') }}">Weather Insights</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('home') }}#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('home') }}#contact">Contact</a>
-        </li>
+      <ul class="navbar-nav ms-auto" style="margin-left: 50px;">
+        <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('insights') }}">Weather Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<body>
-    <section id="results" class="py-5 hero">
-        <div class="container">
-            <h2 class="mb-4 text-center" style="color: white;">What to wear?</h2>
-            <br>
 
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <div class="card text-white shadow" style="background-size: cover; background-position: center; height: 450px; margin-right: 20px;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <div class="ratio ratio-16x9">
-                                <iframe src="../static/images/Hot.mp4" 
-                                title="About Video" 
-                                allow="autoplay; encrypted-media" 
-                                allowfullscreen auto></iframe>
-                            </div>
-                        </div>
-                    </div>
+<body style="background-color: #2e2e48;">
+  <section id="results" class="py-5 hero">
+    <div class="container">
+      <h2 class="mb-5 text-center text-white">Clothing Recommendations</h2>
+
+      <div id="recommendation-cards"></div>
+    </div>
+  </section>
+
+  <footer class="text-center py-3" style="background-color: #3a3c60;">
+    <p style="color: white; margin: 0;">Copyright © 2025 Rain Seekers Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const weatherArray = JSON.parse(localStorage.getItem("data"));
+
+    let hot = false, normal = false, cold = false;
+
+    function tempToClothes(tempK) {
+      if (tempK < 283.15) { cold = true; return "cold"; }
+      else if (tempK < 293.15) { normal = true; return "normal"; }
+      else { hot = true; return "hot"; }
+    }
+
+    function analyzeWeather(weatherArray) {
+      const tempKArray = weatherArray.map(day => day.T2M);
+      tempKArray.forEach(temp => tempToClothes(temp));
+    }
+
+    function buildCards() {
+      const container = document.getElementById("recommendation-cards");
+      let cards = "";
+
+      if (cold) {
+        cards += `
+          <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: #d9c0ce !important;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                  <video autoplay muted loop controls>
+                    <source src="../static/images/Cold.mp4" type="video/mp4">
+                  </video>
                 </div>
-                <div class="col-md-6">
-                    <div style="background-position: right; height: 450px;">
-                        <div class="card-body d-flex align-items-center justify-content-center">
-                            <p id="clothing-summary"></p>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center p-4">
+                <p style="font-size: 1.1rem; color:#333; line-height:1.6;">
+                  ❄️ <strong>Cold Days:</strong> Wear warm clothing such as coats, wool sweaters, scarves, gloves, and closed shoes to stay comfortable in low temperatures.
+                </p>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>`;
+      }
 
-    <footer>
-        <p style="color: white;">Copyright © 2025 Rain Seekers Inc. All rights reserved.</p>
-    </footer>
+      if (normal) {
+        cards += `
+          <div class="card mb-4 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                  <video autoplay muted loop controls>
+                    <source src="../static/images/Weather.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center p-4">
+                <p style="font-size: 1.1rem; color:#333; line-height:1.6;">
+                  🌤 <strong>Mild Days:</strong> Casual and comfortable clothing is enough, like shirts, jeans, or a light cardigan. Perfect for a balanced weather.
+                </p>
+              </div>
+            </div>
+          </div>`;
+      }
+
+      if (hot) {
+        cards += `
+          <div class="card mb-4 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                  <video autoplay muted loop controls>
+                    <source src="../static/images/Hot.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center p-4">
+                <p style="font-size: 1.1rem; color:#333; line-height:1.6;">
+                  🔥 <strong>Hot Days:</strong> Choose light, breathable fabrics and bright colors such as cotton t-shirts, shorts, and sunglasses to stay cool and fresh.
+                </p>
+              </div>
+            </div>
+          </div>`;
+      }
+
+      container.innerHTML = cards;
+    }
+
+    // Run
+    analyzeWeather(weatherArray);
+    buildCards();
+  </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../static/clothes.js"></script>
 </html>
