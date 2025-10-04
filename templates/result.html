@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>result</title>
+  <title>Insights</title>
   <link href="../static/static.css" rel="stylesheet">
   <link href="../static/result.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
@@ -35,7 +35,7 @@
           <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('insights_form') }}">Weather Insights</a>
+          <a class="nav-link" href="{{ url_for('insights') }}">Weather Insights</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('home') }}#about">About</a>
@@ -87,7 +87,7 @@
 
 <section id="results" class="py-5">
   <div class="container">
-    <h2 class="mb-4 text-center">Weather Insights</h2>
+    <h2 class="mb-4 text-center" style="color: #7c3966;">Weather Insights</h2>
     <br>
 
     <!-- Row 1: Temperature -->
@@ -174,11 +174,16 @@
         onclick="downloadJSON()">
         <i class="fas fa-file-code"></i> &nbsp; Download as JSON
       </button>
-      <button class="btn btn-primary btn-lg" 
+      <button class="btn btn-primary btn-lg me-3" 
         style="border-color: #3a3c60; width:270px"
         data-bs-toggle="modal" data-bs-target="#infoModal">
         <i class="fas fa-book-open"></i> &nbsp; More information
       </button>
+      <a class="btn btn-primary btn-lg me-3" 
+        style="border-color: #3a3c60; width:270px" href="{{ url_for('extra') }}"
+        data-bs-toggle="modal" data-bs-target="#infoModal">
+        <i class="fas fa-book-open"></i> &nbsp; What to wear?
+      </a>
     </div>
   </div>
 </section>

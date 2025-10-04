@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="../static/static.css" rel="stylesheet">
+  <link href="../static/index.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background: linear-gradient(to bottom right, #6b3157, #3a3c60);">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand fw-bold" href="index.html"><img src="../static/images/logo.svg" style="width: 40px;"> &nbsp; Rain Seekers</a>
+    
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto" style="margin-left: 50px;"> <!-- pushes items to right -->
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('insights') }}">Weather Insights</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="home" id="home">
+  <div class="rounded-box">
+    <h2 style="margin-left: 10px;">Welcome to Rain Seekers ☁️</h2>
+    <p style="margin-left: 10px;">
+      Rain Seekers brings decades of NASA climate data to life, helping you see <br>how temperature, pressure, wind speed and humidity affect your plans.
+      <br>Every location has its own climate story. Explore how weather patterns <br>might influence outdoor activities, from casual walks to big celebrations,<br>and plan with confidence.
+    <br><h5 style="font-weight: bold; margin-left: 10px;">Plan Smarter, Enjoy the Weather!</h2> <br> <a href="{{ url_for('insights') }}" class="btn btn-primary btn-lg" style="border-color: #3a3c60; margin-left: 10px;">
+   Show Weather
+  </a>
+
+    </p>
+  </div>
+</section>
+
+<br><br>
+
+<section id="about" class="home">
+  <div class="container">
+    <!-- Title -->
+    <h2 class="text-center mb-4" style="color: #7c3966;">About Rain Seekers</h2>
+
+    <!-- Box -->
+    <div class="card p-4"">
+      <div class="row align-items-center">
+        
+        <!-- Video (left) -->
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="../static/images/about-video.mp4" 
+                    title="About Video" 
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Text (right) -->
+        <div class="col-md-6">
+          <ul>
+          <li><p>Rain Seekers is designed to turn NASA’s Earth observation data into a personalized, interactive experience for anyone planning outdoor activities. Our web dashboard lets users explore the likelihood of weather conditions — including heat, cold, rain, wind, and humidity — at a specific location and date of their choice.</p></li>
+
+          <li><p>Users can provide their desired location by typing a place name, selecting an area on a map. The dashboard then presents probabilities and trends using a variety of visualizations, including time series, maps, and summary charts. Clear explanations accompany each visualization, making complex climate data easy to understand and apply.</p></li>
+
+          <li><p>For those who want to analyze the data further, Rain Seekers also allows users to download the output in JSON format, including metadata and source references. By combining interactive visuals, probability insights, and downloadable data, Rain Seekers empowers users to plan smarter and enjoy outdoor experiences with confidence.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:#7c3966;">Contact us</h2>
+    <h4 class="text-center">Reach out to the Rain Seekers team!</h4>
+
+<p class="text-center">We are a group of passionate computer engineering who are fascinated by space exploration and climate science.
+We developed Rain Seekers to participate in NASA’s “Will It Rain On My Parade?” challenge.
+Our goal is to contribute our skills and knowledge while helping people plan outdoor activities smarter and enjoyably using climate data.</p>
+<br>
+    <div class="team-container">
+    <!-- Card 1 -->
+    <div class="contact-card">
+      <img src="../static/images/Aya.png" alt="Aya Abdellatif">
+      <h3>Aya Abdellatif</h3>
+      <p>Software Engineer</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aya-abdllatif/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Aya-Abdellatif"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="contact-card">
+      <img src="../static/images/Aalaa.png" alt="Aalaa Ayman">
+      <h3>Aalaa Ayman</h3>
+      <p>Software Engineer</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aalaa-ayman/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AalaaAyman24"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="contact-card">
+      <img src="../static/images/Pavly.png" alt="Pavly Samuel">
+      <h3>Pavly Samuel</h3>
+      <p>AI Engineer</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pavlysamuel/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Pevooo"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="contact-card">
+      <img src="../static/images/Ahmed.png" alt="Ahmed Essam">
+      <h3>Ahmed Essam</h3>
+      <p>AI Engineer</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ahmed-essam538/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ahm538"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+    </div>
+
+</section>
+
+<footer>
+  <p style="color: white;">Copyright © 2025 Rain Seekers Inc. All rights reserved.</p>
+</footer>
+
+
+<!-- Bootstrap JS (for toggle button) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

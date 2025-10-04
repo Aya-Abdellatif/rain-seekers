@@ -18,12 +18,12 @@ weather_predictor = WeatherPredictor("model/model.keras", "scaler/scaler.pkl")
 data_handler = DataHandler("data/data.feather", cities, weather_predictor)
 
 @app.route("/")
-def index():
-    return render_template("index.html")
+def home():
+    return render_template("home.html")
 
-@app.route("/insights-html")
-def explore():
-    return render_template("/insights-form.html")
+@app.route("/extra")
+def extra():
+    return render_template("extra.html")
 
 @app.route("/insights", methods=["GET", "POST"])
 def insights():
