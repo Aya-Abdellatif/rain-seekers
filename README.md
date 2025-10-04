@@ -162,16 +162,17 @@ RainSeekers makes **NASA’s weather data accessible to everyone**.
 ## 🌐 Web App Interface
 
 ### Home Page
-![Home](images/home.png)
+<img width="1891" height="947" alt="image" src="https://github.com/user-attachments/assets/c1595413-2045-4917-9f07-c0af35e96432" />
 
 ### Weather Insights
-![Weather Insights](images/insights.png)
+<img width="1457" height="3782" alt="screencapture-127-0-0-1-5000-insights-2025-10-04-05_49_57 (1)" src="https://github.com/user-attachments/assets/d60816aa-2c1c-4237-a6f2-024ae6a55b8a" />
 
 ### About Us
-![About](images/about.png)
+<img width="1894" height="951" alt="image" src="https://github.com/user-attachments/assets/72e77e1e-bab5-4646-88c6-5ca27738d81d" />
 
-### Contact Us
-![Contact](images/contact.png)
+### Clothing Recommendation
+<img width="1457" height="1508" alt="screencapture-127-0-0-1-5000-extra-2025-10-04-05_50_28" src="https://github.com/user-attachments/assets/3ebe5d49-a98e-4aff-9a69-64430ec3896d" />
+
 
 ---
 
