@@ -187,7 +187,7 @@ Developed by **Team RainSeekers** for the **NASA Space Apps Hackathon 2025**:
       <a href="https://www.linkedin.com/in/pavlysamuel/">Pavly Samuel</a>
     </td>
     <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D4D35AQGY3JS4r8NAXw/profile-framedphoto-shrink_800_800/B4DZiqi2mfHYAk-/0/1755207920355?e=1760090400&v=beta&t=l28iiqWL8UChjg-3wNnJfBSku8GLwbSK8aNxjlKydf0" width="100px;" alt="Aya Abdullatif"/>
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEL76ybhUiNuQ/profile-displayphoto-scale_400_400/B4DZiqi1n8HwAg-/0/1755207919013?e=1762387200&v=beta&t=8tZpMAWETpMPZCN8TfCjSABxRALYFGIK6ND-8Zl-xvI" width="100px;" alt="Aya Abdellatif"/>
       <br />
       <a href="https://www.linkedin.com/in/aya-abdllatif/">Aya Abdullatif</a>
     </td>
